@@ -90,7 +90,7 @@ function mountContactForm() {
 }
 
 ctaButton?.addEventListener("click", () => {
-  document.getElementById("product-radar")?.scrollIntoView({
+  document.getElementById("products")?.scrollIntoView({
     behavior: "smooth",
     block: "start",
   });

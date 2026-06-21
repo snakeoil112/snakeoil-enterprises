@@ -5,18 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Snakeoil Enterprises — mobile apps, websites, and software"
+      content="Snakeoil Enterprises — mobile apps, websites, and software built, marketed, and sold by Benny The Snake Sorensen and team."
     />
-    <title>Snakeoil Enterprises</title>
+    <meta property="og:title" content="Snakeoil Enterprises" />
+    <meta
+      property="og:description"
+      content="Build. Ship. Sell. Research, promote, and launch digital products that win underserved markets."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/founder-portrait.svg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <title>Snakeoil Enterprises — Build. Ship. Sell.</title>
+    <link rel="icon" href="/founder-portrait.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="/src/style.css" />
     <link rel="stylesheet" href="/src/research-feed.css" />
     <link rel="stylesheet" href="/src/metrics.css" />
   </head>
   <body>
     <header class="site-header">
-      <a class="site-brand" href="#top">Snakeoil Enterprises</a>
+      <a class="site-brand" href="#top">
+        <span class="site-brand__mark" aria-hidden="true">🐍</span>
+        Snakeoil Enterprises
+      </a>
       <nav class="site-nav" aria-label="Primary">
         <a class="site-nav__link" href="#about">About</a>
+        <a class="site-nav__link" href="#services">Services</a>
         <a class="site-nav__link" href="#products">Products</a>
         <a class="site-nav__link" href="#product-radar">Radar</a>
         <a class="site-nav__link" href="#contact">Contact</a>
@@ -24,38 +37,183 @@
     </header>
 
     <main class="shell" id="top">
-      <section class="hero">
-        <p class="eyebrow">Snakeoil Enterprises</p>
-        <h1>Build. Ship. Sell.</h1>
-        <p class="lede">
-          Mobile apps, websites, and software — researched, promoted, and sold by
-          a team that gets the job done.
-        </p>
-        <div class="hero-actions">
-          <button type="button" class="cta-button" id="explore-cta">
-            Explore product radar
-          </button>
+      <section class="hero hero--split">
+        <div class="hero__copy">
+          <p class="eyebrow">Snakeoil Enterprises</p>
+          <h1>Build. Ship. Sell.</h1>
+          <p class="lede">
+            Mobile apps, websites, and software — researched, promoted, and sold by
+            a team that gets the job done.
+          </p>
+          <div class="hero-actions">
+            <button type="button" class="cta-button" id="explore-cta">
+              Explore live products
+            </button>
+            <a class="cta-button cta-button--outline" href="#founder">
+              Meet the founder
+            </a>
+          </div>
+        </div>
+        <div class="hero__visual" aria-hidden="true">
+          <div class="hero__orb"></div>
+          <img
+            class="hero__portrait"
+            src="/founder-portrait.svg"
+            alt=""
+            width="280"
+            height="336"
+          />
         </div>
       </section>
 
-      <section class="content-card" id="about" aria-labelledby="about-title">
-        <p class="eyebrow">Our story</p>
-        <h2 id="about-title">Built by The Snake, shipped for the masses</h2>
+      <section class="stats-bar" aria-label="Company highlights">
+        <div class="stats-bar__item">
+          <p class="stats-bar__value">3+</p>
+          <p class="stats-bar__label">New concepts weekly</p>
+        </div>
+        <div class="stats-bar__item">
+          <p class="stats-bar__value">Daily</p>
+          <p class="stats-bar__label">Social promotion</p>
+        </div>
+        <div class="stats-bar__item">
+          <p class="stats-bar__value">24h</p>
+          <p class="stats-bar__label">Sales follow-up</p>
+        </div>
+        <div class="stats-bar__item">
+          <p class="stats-bar__value">Global</p>
+          <p class="stats-bar__label">Market research</p>
+        </div>
+      </section>
+
+      <section class="content-card content-card--split" id="about" aria-labelledby="about-title">
+        <div>
+          <p class="eyebrow">Our story</p>
+          <h2 id="about-title">Built by The Snake, shipped for the masses</h2>
+          <p class="content-card__lede">
+            Snakeoil Enterprises turns bold product ideas into mobile apps,
+            websites, and software that customers actually use.
+          </p>
+          <div class="content-card__body">
+            <p>
+              Founded by Benny "The Snake" Sorensen, we combine relentless sales,
+              daily promotion, and deep market research to find gaps competitors
+              ignore.
+            </p>
+            <p>
+              Our concepts team prototypes new opportunities every few days.
+              Engineering ships fast. Marketing makes sure the world hears about
+              it.
+            </p>
+          </div>
+        </div>
+        <ul class="pillar-list" aria-label="Team pillars">
+          <li class="pillar-list__item">
+            <strong>Concepts</strong>
+            <span>Spins high-demand product ideas on a weekly cadence.</span>
+          </li>
+          <li class="pillar-list__item">
+            <strong>Engineering</strong>
+            <span>Ships polished apps, sites, and software at startup speed.</span>
+          </li>
+          <li class="pillar-list__item">
+            <strong>Marketing</strong>
+            <span>One of the strongest go-to-market teams in the game.</span>
+          </li>
+          <li class="pillar-list__item">
+            <strong>Promotion</strong>
+            <span>Daily social content that builds a household name.</span>
+          </li>
+          <li class="pillar-list__item">
+            <strong>Sales</strong>
+            <span>Relentless pursuit — we close and we follow up.</span>
+          </li>
+        </ul>
+      </section>
+
+      <section class="founder-card" id="founder" aria-labelledby="founder-title">
+        <img
+          class="founder-card__portrait"
+          src="/founder-portrait.svg"
+          alt='Stylized portrait of Benny "The Snake" Sorensen, founder of Snakeoil Enterprises'
+          width="320"
+          height="384"
+        />
+        <div class="founder-card__copy">
+          <p class="eyebrow">Founder</p>
+          <h2 id="founder-title">Benny "The Snake" Sorensen</h2>
+          <p class="founder-card__role">Founder &amp; Owner</p>
+          <blockquote class="founder-card__quote">
+            "We don't wait for permission to ship. We research the gap, build the
+            proof, promote it daily, and sell until the market listens."
+          </blockquote>
+          <ul class="founder-card__highlights">
+            <li>Product builder across mobile, web, and software</li>
+            <li>Leads concepts, sales, and go-to-market velocity</li>
+            <li>Obsessed with underserved niches and fast validation</li>
+          </ul>
+        </div>
+      </section>
+
+      <section
+        class="content-card"
+        id="services"
+        aria-labelledby="services-title"
+      >
+        <p class="eyebrow">What we do</p>
+        <h2 id="services-title">Full-stack go-to-market for digital products</h2>
         <p class="content-card__lede">
-          Snakeoil Enterprises turns bold product ideas into mobile apps,
-          websites, and software that customers actually use.
+          From opportunity research to daily promotion — Snakeoil runs the loop that
+          turns concepts into revenue.
         </p>
-        <div class="content-card__body">
-          <p>
-            Founded by Benny "The Snake" Sorensen, we combine relentless sales,
-            daily promotion, and deep market research to find gaps competitors
-            ignore.
-          </p>
-          <p>
-            Our concepts team prototypes new opportunities every few days.
-            Engineering ships fast. Marketing makes sure the world hears about
-            it.
-          </p>
+        <div class="service-grid">
+          <article class="service-card">
+            <p class="service-card__icon" aria-hidden="true">🔍</p>
+            <h3>Market research</h3>
+            <p>
+              Deep scans for underserved niches, competition gaps, and demand signals
+              before a single line of code ships.
+            </p>
+          </article>
+          <article class="service-card">
+            <p class="service-card__icon" aria-hidden="true">⚡</p>
+            <h3>Concept velocity</h3>
+            <p>
+              New mobile, web, and software ideas every few days — each validated
+              with waitlists and real buyer intent.
+            </p>
+          </article>
+          <article class="service-card">
+            <p class="service-card__icon" aria-hidden="true">🛠️</p>
+            <h3>Product engineering</h3>
+            <p>
+              Fast, polished builds across apps, sites, and tools — engineered to
+              convert and ready for scale.
+            </p>
+          </article>
+          <article class="service-card">
+            <p class="service-card__icon" aria-hidden="true">📣</p>
+            <h3>Marketing &amp; brand</h3>
+            <p>
+              Positioning, landing pages, and campaign creative that make Snakeoil
+              products impossible to ignore.
+            </p>
+          </article>
+          <article class="service-card">
+            <p class="service-card__icon" aria-hidden="true">📱</p>
+            <h3>Daily promotion</h3>
+            <p>
+              Relentless social presence and content cadence — we reach the masses
+              and keep the brand top of feed.
+            </p>
+          </article>
+          <article class="service-card">
+            <p class="service-card__icon" aria-hidden="true">🎯</p>
+            <h3>Sales execution</h3>
+            <p>
+              Outbound, partnerships, and conversion optimization — our sales team
+              doesn't stop until the job is done.
+            </p>
+          </article>
         </div>
       </section>
 
@@ -67,41 +225,54 @@
         <p class="eyebrow">What we ship</p>
         <h2 id="products-title">Product showcase</h2>
         <p class="content-card__lede">
-          A snapshot of concepts and live products across mobile, web, and
-          software.
+          Live campaigns, open waitlists, and in-market promotion — explore what
+          Snakeoil is building right now.
         </p>
         <div class="product-grid">
-          <article class="product-card">
-            <p class="product-card__category">Mobile App</p>
-            <h3>Pulse Tracker</h3>
-            <p class="product-card__tagline">
-              Daily habit loops for niche utility users.
-            </p>
-            <span class="product-card__status">In market</span>
-          </article>
-          <article class="product-card">
-            <p class="product-card__category">Website</p>
-            <h3>Launchpad</h3>
-            <p class="product-card__tagline">
-              Vertical SaaS landing pages with live demos.
-            </p>
-            <span class="product-card__status">Beta</span>
-          </article>
-          <article class="product-card">
+          <article class="product-card product-card--linked">
             <p class="product-card__category">Software</p>
-            <h3>FlowForge</h3>
+            <h3>TradeAI Australia</h3>
             <p class="product-card__tagline">
-              Workflow automation for solo operators.
+              Quote Aussie trade jobs in under a minute.
             </p>
-            <span class="product-card__status">Concept</span>
+            <span class="product-card__status">Live campaign</span>
+            <a class="product-card__cta" href="/waitlist/trade-cost-calculator/">
+              Try the estimator
+            </a>
           </article>
-          <article class="product-card">
+          <article class="product-card product-card--linked">
+            <p class="product-card__category">Research</p>
+            <h3>Product Opportunity Radar</h3>
+            <p class="product-card__tagline">
+              Score niches before competitors catch on.
+            </p>
+            <span class="product-card__status">Waitlist open</span>
+            <a
+              class="product-card__cta"
+              href="/waitlist/product-opportunity-radar/"
+            >
+              Join waitlist
+            </a>
+          </article>
+          <article class="product-card product-card--linked">
+            <p class="product-card__category">Vertical SaaS</p>
+            <h3>GroomRoute CRM</h3>
+            <p class="product-card__tagline">
+              CRM built for mobile pet groomers on the road.
+            </p>
+            <span class="product-card__status">Waitlist open</span>
+            <a class="product-card__cta" href="/waitlist/pet-groomer-crm/">
+              Join waitlist
+            </a>
+          </article>
+          <article class="product-card product-card--linked">
             <p class="product-card__category">Promotion</p>
             <h3>Signal Boost</h3>
             <p class="product-card__tagline">
               Social campaigns that ship daily creative.
             </p>
             <span class="product-card__status">In market</span>
+            <a class="product-card__cta" href="#contact">Book a campaign</a>
           </article>
         </div>
       </section>
@@ -144,6 +315,49 @@
               Unlock subscriber research feed
             </a>
           </div>
+        </div>
+      </section>
+
+      <section class="social-card" aria-labelledby="social-title">
+        <p class="eyebrow">Stay in the loop</p>
+        <h2 id="social-title">Daily content. Real momentum.</h2>
+        <p class="social-card__lede">
+          Follow Snakeoil for product drops, market gaps, and behind-the-scenes
+          builds from The Snake's team.
+        </p>
+        <div class="social-links">
+          <a
+            class="social-links__item"
+            href="https://www.linkedin.com/company/snakeoil-enterprises"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            LinkedIn
+          </a>
+          <a
+            class="social-links__item"
+            href="https://x.com/snakeoilhq"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            X / Twitter
+          </a>
+          <a
+            class="social-links__item"
+            href="https://www.instagram.com/snakeoilenterprises"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Instagram
+          </a>
+          <a
+            class="social-links__item"
+            href="https://www.youtube.com/@snakeoilenterprises"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            YouTube
+          </a>
         </div>
       </section>
 
@@ -202,8 +416,15 @@
         </dl>
       </section>
     </main>
+
     <footer class="site-footer">
-      <a class="site-footer__link" href="/metrics/">Waitlist metrics (internal)</a>
+      <p class="site-footer__tagline">
+        Snakeoil Enterprises — we get the job done.
+      </p>
+      <div class="site-footer__links">
+        <a class="site-footer__link" href="/research-feed/">Research feed</a>
+        <a class="site-footer__link" href="/metrics/">Waitlist metrics (internal)</a>
+      </div>
     </footer>
     <script type="module" src="/src/main.js"></script>
   </body>

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 480" role="img" aria-labelledby="founderTitle founderDesc">
+  <title id="founderTitle">Benny The Snake Sorensen</title>
+  <desc id="founderDesc">Stylized founder portrait for Snakeoil Enterprises</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#14532d"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#4ade80" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#4ade80" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="skin" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f5d0b5"/>
+      <stop offset="100%" stop-color="#d9a27d"/>
+    </linearGradient>
+    <linearGradient id="jacket" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="480" rx="24" fill="url(#bg)"/>
+  <ellipse cx="200" cy="120" rx="160" ry="90" fill="url(#glow)"/>
+  <circle cx="200" cy="175" r="78" fill="url(#skin)"/>
+  <path d="M122 175c8-42 36-68 78-68s70 26 78 68c-22 14-50 22-78 22s-56-8-78-22z" fill="#2f1f14"/>
+  <path d="M145 320c18 48 92 48 110 0l-55 130z" fill="url(#jacket)"/>
+  <path d="M120 300c12-18 36-28 80-28s68 10 80 28c-8 24-40 42-80 42s-72-18-80-42z" fill="#334155"/>
+  <path d="M160 250c0-10 8-18 18-18h44c10 0 18 8 18 18v8c0 10-8 18-18 18h-44c-10 0-18-8-18-18v-8z" fill="#111827"/>
+  <path d="M95 210c18-8 36-12 55-12 20 0 38 4 55 12-6 18-28 30-55 30s-49-12-55-30z" fill="#2f1f14"/>
+  <ellipse cx="170" cy="178" rx="10" ry="12" fill="#1f2937"/>
+  <ellipse cx="230" cy="178" rx="10" ry="12" fill="#1f2937"/>
+  <path d="M182 205c8 8 28 8 36 0" fill="none" stroke="#8b5e3c" stroke-width="4" stroke-linecap="round"/>
+  <path d="M250 95c40 18 58 52 48 88-6 24-24 42-48 52" fill="none" stroke="#22c55e" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="292" cy="88" r="10" fill="#4ade80"/>
+  <circle cx="292" cy="88" r="4" fill="#052e16"/>
+  <text x="200" y="430" text-anchor="middle" fill="#86efac" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="700" letter-spacing="0.08em">BENNY "THE SNAKE" SORENSEN</text>
+  <text x="200" y="455" text-anchor="middle" fill="#94a3b8" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" letter-spacing="0.12em">FOUNDER &amp; OWNER</text>
+</svg>
