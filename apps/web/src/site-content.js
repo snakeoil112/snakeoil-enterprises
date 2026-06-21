@@ -47,6 +47,18 @@ export const FOUNDER_CONTENT = {
   ],
 };
 
+/** Disabled until board approves v3 demo on SNAAA-43. */
+export const FOUNDER_VIDEO = {
+  enabled: false,
+  src: "/founder-reel.mp4",
+  posterSrc: "/founder-reel-poster.jpg",
+  variant: "likeness",
+  social: {
+    linkedin16x9: "/social/founder-reel-linkedin-16x9.mp4",
+    reels9x16: "/social/founder-reel-reels-9x16.mp4",
+  },
+};
+
 export const SERVICES_CONTENT = {
   eyebrow: "What we do",
   title: "Full-stack go-to-market for digital products",

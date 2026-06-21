@@ -22,7 +22,9 @@
     "ci:verify": "bash scripts/ci-verify.sh",
     "start:web": "npm run start --workspace @snakeoil/web",
     "dev:web": "npm run dev --workspace @snakeoil/web",
-    "build:web": "npm run build --workspace @snakeoil/web"
+    "build:web": "npm run build --workspace @snakeoil/web",
+    "build:founder-demo-v3": "node scripts/build-founder-demo-v3.mjs",
+    "integrate:founder-video": "node scripts/integrate-founder-video.mjs"
   },
   "engines": {
     "node": ">=20"

@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Founder Video — Demo Preview (Not for posting)</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #0b1220;
+        --card: #111827;
+        --accent: #86efac;
+        --warn: #fbbf24;
+        --text: #e2e8f0;
+        --muted: #94a3b8;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: Inter, system-ui, sans-serif;
+        background: radial-gradient(circle at top, #1e293b, var(--bg) 55%);
+        color: var(--text);
+        line-height: 1.5;
+      }
+      .shell { max-width: 1100px; margin: 0 auto; padding: 2rem 1.25rem 3rem; }
+      .banner {
+        background: rgba(251, 191, 36, 0.15);
+        border: 1px solid rgba(251, 191, 36, 0.45);
+        color: #fde68a;
+        border-radius: 12px;
+        padding: 0.9rem 1rem;
+        margin-bottom: 1.5rem;
+        font-weight: 600;
+      }
+      h1 { margin: 0 0 0.35rem; font-size: clamp(1.6rem, 4vw, 2.2rem); }
+      .lede { color: var(--muted); max-width: 70ch; }
+      .grid {
+        display: grid;
+        gap: 1.25rem;
+        margin-top: 1.75rem;
+      }
+      @media (min-width: 900px) {
+        .grid--2 { grid-template-columns: 1fr 1fr; }
+        .grid--3 { grid-template-columns: repeat(3, 1fr); }
+      }
+      .card {
+        background: var(--card);
+        border: 1px solid rgba(148, 163, 184, 0.2);
+        border-radius: 16px;
+        padding: 1rem;
+      }
+      .card h2 { margin: 0 0 0.5rem; font-size: 1.05rem; }
+      .card p { margin: 0; color: var(--muted); font-size: 0.95rem; }
+      video, img {
+        width: 100%;
+        border-radius: 12px;
+        background: #000;
+        display: block;
+      }
+      ul { margin: 0.5rem 0 0; padding-left: 1.1rem; color: var(--muted); }
+      li + li { margin-top: 0.35rem; }
+      .tag {
+        display: inline-block;
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 0.5rem;
+      }
+      .placement {
+        margin-top: 1.75rem;
+        padding: 1.25rem;
+        border-radius: 16px;
+        border: 1px dashed rgba(134, 239, 172, 0.35);
+        background: rgba(15, 23, 42, 0.65);
+      }
+      .mock-site {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: 280px 1fr;
+        align-items: start;
+      }
+      @media (max-width: 700px) {
+        .mock-site { grid-template-columns: 1fr; }
+      }
+      .mock-founder {
+        border-radius: 14px;
+        overflow: hidden;
+        border: 1px solid rgba(148, 163, 184, 0.25);
+      }
+      .mock-founder video { border-radius: 0; }
+      .script {
+        font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+        font-size: 0.85rem;
+        white-space: pre-wrap;
+        background: #020617;
+        border-radius: 12px;
+        padding: 1rem;
+        color: #cbd5e1;
+        border: 1px solid rgba(148, 163, 184, 0.2);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="shell">
+      <p class="banner">DEMO v2 ONLY — AI-regenerated per board feedback. Not posted yet.</p>
+      <p class="tag">SNAAA-43 follow-up</p>
+      <h1>Founder video — revised AI demo</h1>
+      <p class="lede">
+        Per board rejection: suit, clean-shaven look, and confident voiceover
+        explaining what Snakeoil Enterprises sells and does. AI-regenerated portrait
+        plus professional narration — review before any website or social posting.
+      </p>
+
+      <section class="grid grid--2">
+        <article class="card">
+          <p class="tag">Source</p>
+          <h2>What you uploaded</h2>
+          <img src="source-frame.jpg" alt="Source video frame at 2 seconds" />
+          <ul>
+            <li>360×480 portrait selfie in tiled room</li>
+            <li>Casual red polo; room clutter visible</li>
+            <li>Audio has room echo; delivery can be tightened</li>
+          </ul>
+        </article>
+        <article class="card">
+          <p class="tag">Revised v2</p>
+          <h2>AI-regenerated founder reel</h2>
+          <video controls playsinline poster="founder-ai-portrait.jpg">
+            <source src="ai-regenerated-demo-v2.mp4" type="video/mp4" />
+          </video>
+          <ul>
+            <li>AI portrait: navy suit, clean-shaven, studio backdrop</li>
+            <li>Confident AU voiceover explaining products and services</li>
+            <li>9:16 format with Snakeoil lower-third (watermarked demo)</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="grid grid--2" style="margin-top: 1.25rem">
+        <article class="card">
+          <p class="tag">Audio pass</p>
+          <h2>Cleanup preview (no graphics)</h2>
+          <video controls playsinline>
+            <source src="cleanup-preview.mp4" type="video/mp4" />
+          </video>
+          <p>Isolated technical cleanup so you can judge sound and picture quality.</p>
+        </article>
+        <article class="card">
+          <p class="tag">Wardrobe &amp; presence</p>
+          <h2>Professional finish (after approval)</h2>
+          <ul>
+            <li><strong>Option A (fast):</strong> Keep take; polish background, audio, and graphics as shown.</li>
+            <li><strong>Option B (recommended):</strong> Quick re-shoot in navy blazer, plain wall or branded backdrop.</li>
+            <li><strong>Option C:</strong> Virtual wardrobe + studio background replacement on approved take.</li>
+          </ul>
+          <p style="margin-top: 0.75rem">
+            Confident delivery: tighten pacing, remove filler pauses, and optionally
+            add a crisp closing line with subtle room-tone bed under VO.
+          </p>
+        </article>
+      </section>
+
+      <section class="placement">
+        <p class="tag">If approved — where it posts</p>
+        <h2>Website founder section (mock)</h2>
+        <div class="mock-site">
+          <div class="mock-founder">
+            <video controls playsinline muted>
+              <source src="final-concept-demo.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div>
+            <h3 style="margin: 0 0 0.25rem">Benny "The Snake" Sorensen</h3>
+            <p style="color: var(--accent); margin: 0 0 0.75rem">Founder &amp; Owner</p>
+            <p style="color: var(--muted)">
+              Replaces static SVG portrait with a muted-loop founder reel on
+              snakeoil-enterprises homepage + LinkedIn/TikTok 9:16 cutdown.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="card" style="margin-top: 1.25rem">
+        <p class="tag">Script polish</p>
+        <h2>Proposed confident VO (edit to your words)</h2>
+        <div class="script">I'm Benny "The Snake" Sorensen — founder of Snakeoil Enterprises.
+
+We research underserved markets, ship mobile apps and software fast,
+and promote daily until the product wins.
+
+If you have a gap in your market, we build the proof and sell until
+the world listens. Let's talk.</div>
+      </section>
+    </main>
+  </body>
+</html>

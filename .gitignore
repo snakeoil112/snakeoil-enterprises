@@ -49,3 +49,12 @@ venv/
 *.aab
 .gradle/
 DerivedData/
+
+# Founder video demo binaries (review assets live on issue attachments)
+apps/web/public/founder-video-demo/work/
+apps/web/public/founder-video-demo/*.mp4
+apps/web/public/founder-video-demo/*.mov
+apps/web/public/founder-video-demo/*.mp3
+apps/web/public/founder-reel.mp4
+apps/web/public/founder-reel-poster.jpg
+apps/web/public/social/
