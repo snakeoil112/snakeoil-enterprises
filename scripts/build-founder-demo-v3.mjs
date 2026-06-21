@@ -11,7 +11,6 @@ import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { deflateSync } from "node:zlib";
 import ffmpegPath from "ffmpeg-static";
-import ffprobePath from "ffprobe-static";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = join(__dirname, "..");
@@ -22,7 +21,6 @@ mkdirSync(workDir, { recursive: true });
 
 const sourceMov = join(workDir, "source.mov");
 const ffmpeg = ffmpegPath;
-const ffprobe = ffprobePath.path;
 
 function run(cmd, args, label) {
   console.log(`[build] ${label}`);
@@ -41,44 +39,76 @@ const output = join(demoDir, "likeness-demo-v3.mp4");
 const voicePreview = join(demoDir, "voice-sample-clean.mp3");
 
 // Extract founder voice sample (mono 48k)
-run(ffmpeg, [
-  "-y", "-i", sourceMov,
-  "-map", "0:a:0",
-  "-ac", "1", "-ar", "48000",
-  voiceRaw,
-], "extract voice");
+run(
+  ffmpeg,
+  [
+    "-y",
+    "-i",
+    sourceMov,
+    "-map",
+    "0:a:0",
+    "-ac",
+    "1",
+    "-ar",
+    "48000",
+    voiceRaw,
+  ],
+  "extract voice",
+);
 
 // Denoise + normalize + light compression for confident delivery
-run(ffmpeg, [
-  "-y", "-i", voiceRaw,
-  "-af", "highpass=f=90,lowpass=f=9000,afftdn=nf=-25,acompressor=threshold=-18dB:ratio=3:attack=5:release=80,loudnorm=I=-16:TP=-1.5:LRA=11",
-  voiceClean,
-], "clean voice");
+run(
+  ffmpeg,
+  [
+    "-y",
+    "-i",
+    voiceRaw,
+    "-af",
+    "highpass=f=90,lowpass=f=9000,afftdn=nf=-25,acompressor=threshold=-18dB:ratio=3:attack=5:release=80,loudnorm=I=-16:TP=-1.5:LRA=11",
+    voiceClean,
+  ],
+  "clean voice",
+);
 
-run(ffmpeg, [
-  "-y", "-i", voiceClean,
-  "-codec:a", "libmp3lame", "-q:a", "2",
-  voicePreview,
-], "export voice preview mp3");
+run(
+  ffmpeg,
+  ["-y", "-i", voiceClean, "-codec:a", "libmp3lame", "-q:a", "2", voicePreview],
+  "export voice preview mp3",
+);
 
 // Professional video pass: crop face, blur background, grade, sharpen
-run(ffmpeg, [
-  "-y", "-i", sourceMov,
-  "-vf", [
-    "scale=1080:1920:force_original_aspect_ratio=increase",
-    "crop=1080:1920",
-    "split[fg][bg]",
-    "[bg]scale=1080:1920,gblur=sigma=28[blurred]",
-    "[fg]scale=720:-1,crop=720:960:(iw-720)/2:(ih-960)/2+40,format=rgba,colorchannelmixer=aa=1[face]",
-    "[blurred][face]overlay=(W-w)/2:(H-h)/2-40:format=auto",
-    "eq=contrast=1.08:brightness=0.03:saturation=1.05",
-    "unsharp=5:5:0.8:5:5:0.0",
-  ].join(","),
-  "-an",
-  "-c:v", "libx264", "-preset", "medium", "-crf", "20", "-pix_fmt", "yuv420p",
-  "-t", "13.2",
-  videoClean,
-], "enhance video");
+run(
+  ffmpeg,
+  [
+    "-y",
+    "-i",
+    sourceMov,
+    "-vf",
+    [
+      "scale=1080:1920:force_original_aspect_ratio=increase",
+      "crop=1080:1920",
+      "split[fg][bg]",
+      "[bg]scale=1080:1920,gblur=sigma=28[blurred]",
+      "[fg]scale=720:-1,crop=720:960:(iw-720)/2:(ih-960)/2+40,format=rgba,colorchannelmixer=aa=1[face]",
+      "[blurred][face]overlay=(W-w)/2:(H-h)/2-40:format=auto",
+      "eq=contrast=1.08:brightness=0.03:saturation=1.05",
+      "unsharp=5:5:0.8:5:5:0.0",
+    ].join(","),
+    "-an",
+    "-c:v",
+    "libx264",
+    "-preset",
+    "medium",
+    "-crf",
+    "20",
+    "-pix_fmt",
+    "yuv420p",
+    "-t",
+    "13.2",
+    videoClean,
+  ],
+  "enhance video",
+);
 
 // Branded lower-third overlay (1080x1920 PNG via sharp-free raw RGBA)
 const w = 1080;
@@ -89,32 +119,57 @@ const barH = Math.floor(h * 0.14);
 for (let y = barTop; y < barTop + barH; y++) {
   for (let x = 0; x < w; x++) {
     const i = (y * w + x) * 4;
-    png[i] = 11; png[i + 1] = 18; png[i + 2] = 32; png[i + 3] = 210;
+    png[i] = 11;
+    png[i + 1] = 18;
+    png[i + 2] = 32;
+    png[i + 3] = 210;
   }
 }
 // watermark stripe
 for (let y = 48; y < 120; y++) {
   for (let x = 48; x < 520; x++) {
     const i = (y * w + x) * 4;
-    png[i] = 251; png[i + 1] = 191; png[i + 2] = 36; png[i + 3] = 180;
+    png[i] = 251;
+    png[i + 1] = 191;
+    png[i + 2] = 36;
+    png[i + 3] = 180;
   }
 }
 writeFileSync(overlayPng, encodePng(w, h, png));
 
-run(ffmpeg, [
-  "-y",
-  "-i", videoClean,
-  "-i", voiceClean,
-  "-i", overlayPng,
-  "-filter_complex", [
-    "[0:v][2:v]overlay=0:0:format=auto[v]",
-  ].join(""),
-  "-map", "[v]", "-map", "1:a",
-  "-c:v", "libx264", "-preset", "medium", "-crf", "18", "-pix_fmt", "yuv420p",
-  "-c:a", "aac", "-b:a", "192k",
-  "-shortest",
-  output,
-], "mux final v3 demo");
+run(
+  ffmpeg,
+  [
+    "-y",
+    "-i",
+    videoClean,
+    "-i",
+    voiceClean,
+    "-i",
+    overlayPng,
+    "-filter_complex",
+    ["[0:v][2:v]overlay=0:0:format=auto[v]"].join(""),
+    "-map",
+    "[v]",
+    "-map",
+    "1:a",
+    "-c:v",
+    "libx264",
+    "-preset",
+    "medium",
+    "-crf",
+    "18",
+    "-pix_fmt",
+    "yuv420p",
+    "-c:a",
+    "aac",
+    "-b:a",
+    "192k",
+    "-shortest",
+    output,
+  ],
+  "mux final v3 demo",
+);
 
 console.log(`[build] wrote ${output}`);
 
@@ -137,7 +192,11 @@ function ihdrData(width, height) {
   const buf = Buffer.alloc(13);
   buf.writeUInt32BE(width, 0);
   buf.writeUInt32BE(height, 4);
-  buf[8] = 8; buf[9] = 6; buf[10] = 0; buf[11] = 0; buf[12] = 0;
+  buf[8] = 8;
+  buf[9] = 6;
+  buf[10] = 0;
+  buf[11] = 0;
+  buf[12] = 0;
   return buf;
 }
 
