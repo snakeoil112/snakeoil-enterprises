@@ -32,6 +32,8 @@
   "license": "UNLICENSED",
   "devDependencies": {
     "@biomejs/biome": "^2.5.0",
+    "ffmpeg-static": "^5.2.0",
+    "ffprobe-static": "^3.1.0",
     "vitest": "^4.1.9"
   }
 }

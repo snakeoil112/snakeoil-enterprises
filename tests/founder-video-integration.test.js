@@ -11,6 +11,11 @@ describe("founder video integration readiness", () => {
     expect(FOUNDER_VIDEO.social.reels9x16).toContain("reels");
   });
 
+  it("resolves ffmpeg-static for integration scripts", async () => {
+    const mod = await import("ffmpeg-static");
+    expect(mod.default).toBeTruthy();
+  });
+
   it("ships the post-approval integration script", () => {
     const script = readFileSync("scripts/integrate-founder-video.mjs", "utf8");
     expect(script).toContain("founder-reel.mp4");
