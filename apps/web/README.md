@@ -28,7 +28,7 @@ GitHub Pages deploys run automatically on push to `main` (see [`.github/workflow
 |------|-------|
 | Deploy trigger | Push to `main` |
 | Published artifact | `apps/web/dist` |
-| Public URL | `https://<github-owner>.github.io/<repo-name>/` |
+| Public URL | [https://snakeoil112.github.io/snakeoil-enterprises/](https://snakeoil112.github.io/snakeoil-enterprises/) |
 
 Enable **Settings → Pages → Source: GitHub Actions** in the repository before the first deploy.
 

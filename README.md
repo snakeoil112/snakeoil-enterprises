@@ -57,7 +57,7 @@ Pushes to `main` publish the production build of `apps/web` via [`.github/workfl
 
    `https://<github-owner>.github.io/<repo-name>/`
 
-   Example: if the repo is `snakeoil-enterprises` under owner `acme`, the URL is `https://acme.github.io/snakeoil-enterprises/`.
+   **Live site:** [https://snakeoil112.github.io/snakeoil-enterprises/](https://snakeoil112.github.io/snakeoil-enterprises/) (repo: [snakeoil112/snakeoil-enterprises](https://github.com/snakeoil112/snakeoil-enterprises))
 
 3. The deploy workflow sets `VITE_BASE_PATH=/<repo-name>/` so asset paths resolve correctly on project pages. For a user/org site served from the repo root, set repository variable `VITE_BASE_PATH` to `/` in **Settings → Secrets and variables → Actions → Variables**.
 
