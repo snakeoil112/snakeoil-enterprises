@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Snakeoil Enterprises — mobile apps, websites, and software"
+    />
+    <title>Snakeoil Enterprises</title>
+    <link rel="stylesheet" href="/src/style.css" />
+    <link rel="stylesheet" href="/src/research-feed.css" />
+    <link rel="stylesheet" href="/src/metrics.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="site-brand" href="#top">Snakeoil Enterprises</a>
+      <nav class="site-nav" aria-label="Primary">
+        <a class="site-nav__link" href="#about">About</a>
+        <a class="site-nav__link" href="#products">Products</a>
+        <a class="site-nav__link" href="#product-radar">Radar</a>
+        <a class="site-nav__link" href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main class="shell" id="top">
+      <section class="hero">
+        <p class="eyebrow">Snakeoil Enterprises</p>
+        <h1>Build. Ship. Sell.</h1>
+        <p class="lede">
+          Mobile apps, websites, and software — researched, promoted, and sold by
+          a team that gets the job done.
+        </p>
+        <div class="hero-actions">
+          <button type="button" class="cta-button" id="explore-cta">
+            Explore product radar
+          </button>
+        </div>
+      </section>
+
+      <section class="content-card" id="about" aria-labelledby="about-title">
+        <p class="eyebrow">Our story</p>
+        <h2 id="about-title">Built by The Snake, shipped for the masses</h2>
+        <p class="content-card__lede">
+          Snakeoil Enterprises turns bold product ideas into mobile apps,
+          websites, and software that customers actually use.
+        </p>
+        <div class="content-card__body">
+          <p>
+            Founded by Benny "The Snake" Sorensen, we combine relentless sales,
+            daily promotion, and deep market research to find gaps competitors
+            ignore.
+          </p>
+          <p>
+            Our concepts team prototypes new opportunities every few days.
+            Engineering ships fast. Marketing makes sure the world hears about
+            it.
+          </p>
+        </div>
+      </section>
+
+      <section
+        class="content-card"
+        id="products"
+        aria-labelledby="products-title"
+      >
+        <p class="eyebrow">What we ship</p>
+        <h2 id="products-title">Product showcase</h2>
+        <p class="content-card__lede">
+          A snapshot of concepts and live products across mobile, web, and
+          software.
+        </p>
+        <div class="product-grid">
+          <article class="product-card">
+            <p class="product-card__category">Mobile App</p>
+            <h3>Pulse Tracker</h3>
+            <p class="product-card__tagline">
+              Daily habit loops for niche utility users.
+            </p>
+            <span class="product-card__status">In market</span>
+          </article>
+          <article class="product-card">
+            <p class="product-card__category">Website</p>
+            <h3>Launchpad</h3>
+            <p class="product-card__tagline">
+              Vertical SaaS landing pages with live demos.
+            </p>
+            <span class="product-card__status">Beta</span>
+          </article>
+          <article class="product-card">
+            <p class="product-card__category">Software</p>
+            <h3>FlowForge</h3>
+            <p class="product-card__tagline">
+              Workflow automation for solo operators.
+            </p>
+            <span class="product-card__status">Concept</span>
+          </article>
+          <article class="product-card">
+            <p class="product-card__category">Promotion</p>
+            <h3>Signal Boost</h3>
+            <p class="product-card__tagline">
+              Social campaigns that ship daily creative.
+            </p>
+            <span class="product-card__status">In market</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="demo-card" id="product-radar" aria-labelledby="radar-title">
+        <div class="demo-card__header">
+          <p class="eyebrow">Interactive demo</p>
+          <h2 id="radar-title">Product radar</h2>
+          <p class="demo-card__lede">
+            Pick a category to preview how Snakeoil scores market opportunity and
+            competition before we ship the next product.
+          </p>
+        </div>
+
+        <div class="radar-panel" aria-live="polite">
+          <div class="radar-panel__summary">
+            <p class="radar-panel__headline" id="radar-headline">—</p>
+            <p class="radar-panel__score" id="radar-score">—</p>
+            <p class="radar-panel__competition" id="radar-competition">—</p>
+          </div>
+
+          <div
+            class="radar-meter"
+            role="progressbar"
+            aria-valuemin="0"
+            aria-valuemax="100"
+            aria-label="Opportunity score"
+          >
+            <div class="radar-meter__fill" id="radar-meter"></div>
+          </div>
+
+          <p class="radar-panel__insight" id="radar-insight">—</p>
+
+          <div class="radar-panel__actions">
+            <a
+              class="cta-button cta-button--outline"
+              id="research-feed-cta"
+              href="/research-feed/?utm_source=home&amp;utm_medium=radar&amp;utm_campaign=research-feed"
+            >
+              Unlock subscriber research feed
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-card" id="contact" aria-labelledby="contact-title">
+        <p class="eyebrow">Get in touch</p>
+        <h2 id="contact-title">Ready to build the next Snakeoil product?</h2>
+        <p class="content-card__lede">
+          Tell us what you want to launch. Our sales and concepts teams respond
+          within one business day.
+        </p>
+        <form class="contact-form" id="contact-form">
+          <label class="contact-form__field">
+            <span>Name</span>
+            <input type="text" name="name" placeholder="Your name" required />
+          </label>
+          <label class="contact-form__field">
+            <span>Email</span>
+            <input
+              type="email"
+              name="email"
+              placeholder="you@example.com"
+              required
+            />
+          </label>
+          <label class="contact-form__field">
+            <span>What do you want to build?</span>
+            <textarea
+              name="message"
+              rows="4"
+              placeholder="Mobile app, website, software idea…"
+              required
+            ></textarea>
+          </label>
+          <button type="submit" class="cta-button">Send message</button>
+          <p class="contact-form__note" id="contact-note" hidden>
+            Thanks — we'll be in touch. (Placeholder: no backend wired yet.)
+          </p>
+        </form>
+      </section>
+
+      <section class="status-card" aria-live="polite">
+        <h2>App status</h2>
+        <dl>
+          <div>
+            <dt>Package</dt>
+            <dd id="package-name">@snakeoil/web</dd>
+          </div>
+          <div>
+            <dt>Environment</dt>
+            <dd id="environment">loading…</dd>
+          </div>
+          <div>
+            <dt>Started</dt>
+            <dd id="started-at">—</dd>
+          </div>
+        </dl>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <a class="site-footer__link" href="/metrics/">Waitlist metrics (internal)</a>
+    </footer>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en-AU">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="State-by-state labour rates, job scopes, and materials bundled into instant AUD estimates — built for sole traders tired of undercharging."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="TradeAI Australia" />
+    <meta property="og:title" content="TradeAI Australia" />
+    <meta
+      property="og:description"
+      content="State-by-state labour rates, job scopes, and materials bundled into instant AUD estimates — built for sole traders tired of undercharging."
+    />
+    <meta
+      property="og:image"
+      content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='630' viewBox='0 0 1200 630'%3E%3Crect fill='%23141b2f' width='1200' height='630'/%3E%3Ctext x='600' y='300' fill='%234ade80' font-family='system-ui,sans-serif' font-size='56' font-weight='700' text-anchor='middle'%3ESnakeoil Enterprises%3C/text%3E%3Ctext x='600' y='360' fill='%2394a3b8' font-family='system-ui,sans-serif' font-size='28' text-anchor='middle'%3EConcept validation waitlist%3C/text%3E%3C/svg%3E"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="TradeAI Australia" />
+    <meta
+      name="twitter:description"
+      content="State-by-state labour rates, job scopes, and materials bundled into instant AUD estimates — built for sole traders tired of undercharging."
+    />
+    <meta
+      name="twitter:image"
+      content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='630' viewBox='0 0 1200 630'%3E%3Crect fill='%23141b2f' width='1200' height='630'/%3E%3Ctext x='600' y='300' fill='%234ade80' font-family='system-ui,sans-serif' font-size='56' font-weight='700' text-anchor='middle'%3ESnakeoil Enterprises%3C/text%3E%3Ctext x='600' y='360' fill='%2394a3b8' font-family='system-ui,sans-serif' font-size='28' text-anchor='middle'%3EConcept validation waitlist%3C/text%3E%3C/svg%3E"
+    />
+    <title>TradeAI Australia</title>
+    <link rel="stylesheet" href="/src/style.css" />
+    <link rel="stylesheet" href="/src/waitlist/waitlist.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="site-brand" href="../../index.html">Snakeoil Enterprises</a>
+      <nav class="site-nav" aria-label="Concept pages">
+        <a class="site-nav__link" href="../product-opportunity-radar/">Product radar</a>
+        <a class="site-nav__link" href="../pet-groomer-crm/">GroomRoute CRM</a>
+      </nav>
+    </header>
+
+    <main class="shell waitlist-shell">
+      <section class="waitlist-hero">
+        <a class="waitlist-back" href="../../index.html">← Back to Snakeoil home</a>
+        <p class="eyebrow">Australian trades</p>
+        <h1>Quote Aussie trade jobs in under a minute</h1>
+        <p class="lede">
+          State-by-state labour rates, job scopes, and materials bundled into instant AUD
+          estimates — built for sole traders tired of undercharging.
+        </p>
+      </section>
+
+      <section class="waitlist-card" aria-labelledby="value-title">
+        <p class="eyebrow">Why it wins</p>
+        <h2 id="value-title">Value proposition</h2>
+        <div id="value-props"></div>
+      </section>
+
+      <section class="waitlist-card" aria-labelledby="calculator-title">
+        <p class="eyebrow">Try the MVP</p>
+        <h2 id="calculator-title">AU trade cost calculator</h2>
+        <p class="waitlist-form__hint">
+          MVP pricing model for Australian trades — state price tables ship with the full
+          waitlist launch.
+        </p>
+
+        <form class="calculator-form" id="calculator-form">
+          <div class="calculator-form__group">
+            <label class="calculator-form__label" for="trade">Trade type</label>
+            <select id="trade" name="trade">
+              <option value="electrician">Electrician — from $110/hr</option>
+              <option value="plumber">Plumber — from $105/hr</option>
+              <option value="carpenter">Carpenter — from $85/hr</option>
+              <option value="painter">Painter — from $65/hr</option>
+              <option value="tiler">Tiler — from $75/hr</option>
+              <option value="landscaper">Landscaper — from $70/hr</option>
+            </select>
+          </div>
+
+          <div class="calculator-form__group">
+            <label class="calculator-form__label" for="scope">Job scope</label>
+            <select id="scope" name="scope">
+              <option value="callout">Call-out / minor fix — ≈1.5 hrs</option>
+              <option value="half-day">Half-day job — ≈4 hrs</option>
+              <option value="full-day">Full-day job — ≈8 hrs</option>
+              <option value="multi-day">Multi-day project — ≈16 hrs</option>
+            </select>
+          </div>
+
+          <fieldset class="calculator-form__group">
+            <legend class="calculator-form__label">Add-ons</legend>
+            <div class="calculator-addons">
+              <label class="calculator-addon">
+                <input type="checkbox" name="addon" value="materials" />
+                Materials allowance (+$200)
+              </label>
+              <label class="calculator-addon">
+                <input type="checkbox" name="addon" value="after-hours" />
+                After-hours premium (+25% labour)
+              </label>
+              <label class="calculator-addon">
+                <input type="checkbox" name="addon" value="travel" />
+                Regional travel surcharge (+$85)
+              </label>
+            </div>
+          </fieldset>
+
+          <div class="calculator-result" aria-live="polite">
+            <p class="calculator-result__label">Estimated quote (AUD)</p>
+            <p class="calculator-result__summary" id="quote-summary">—</p>
+            <p class="calculator-result__total" id="quote-total">—</p>
+          </div>
+        </form>
+
+        <aside class="calculator-cta" id="calculator-cta" hidden>
+          <p class="calculator-cta__eyebrow">Your estimate is ready</p>
+          <h3 class="calculator-cta__title">Lock in state price tables before launch</h3>
+          <p class="calculator-cta__body">
+            Early access is open during our live TradeAI Australia promo — join the
+            waitlist to export quotes and stop undercharging on every job.
+          </p>
+          <p class="calculator-cta__quote">
+            Your estimate:
+            <strong id="calculator-cta-total">—</strong>
+          </p>
+          <a
+            class="cta-button calculator-cta__button"
+            id="calculator-cta-button"
+            href="#waitlist-section"
+            >Get TradeAI Australia early access</a
+          >
+        </aside>
+      </section>
+
+      <section
+        class="waitlist-card"
+        id="waitlist-section"
+        aria-labelledby="waitlist-title"
+      >
+        <p class="eyebrow">Full launch</p>
+        <h2 id="waitlist-title">Get TradeAI Australia early access</h2>
+        <p class="waitlist-form__hint">
+          Join the waitlist for state price tables and one-tap quote export.
+        </p>
+        <form class="waitlist-form" id="waitlist-form">
+          <label class="waitlist-form__field">
+            <span>Email</span>
+            <input
+              type="email"
+              name="email"
+              placeholder="you@example.com"
+              required
+              autocomplete="email"
+            />
+          </label>
+          <button type="submit" class="cta-button">Get TradeAI Australia early access</button>
+          <p class="waitlist-form__note" id="waitlist-note" hidden></p>
+          <div id="waitlist-share-root"></div>
+        </form>
+      </section>
+    </main>
+    <script type="module" src="/src/waitlist/trade-page.js"></script>
+  </body>
+</html>

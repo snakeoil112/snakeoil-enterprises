@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Snakeoil waitlist metrics — internal concept validation dashboard"
+    />
+    <title>Waitlist Metrics — Snakeoil Enterprises</title>
+    <link rel="stylesheet" href="/src/style.css" />
+    <link rel="stylesheet" href="/src/metrics.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="site-brand" href="../index.html">Snakeoil Enterprises</a>
+      <nav class="site-nav" aria-label="Metrics">
+        <a class="site-nav__link" href="../index.html#products">Products</a>
+        <a class="site-nav__link" href="../research-feed/">Research feed</a>
+      </nav>
+    </header>
+
+    <main class="shell metrics-shell">
+      <section class="metrics-hero">
+        <p class="eyebrow">Internal dashboard</p>
+        <h1>Waitlist metrics</h1>
+        <p class="lede">
+          Track concept validation signups and research-feed unlocks from browser
+          localStorage. Export JSON or CSV for manual reporting.
+        </p>
+        <div class="metrics-actions">
+          <button type="button" class="cta-button" id="export-json">
+            Export JSON
+          </button>
+          <button type="button" class="cta-button cta-button--outline" id="export-csv">
+            Export CSV
+          </button>
+        </div>
+      </section>
+
+      <p class="metrics-meta">
+        Refreshed <span id="metrics-refreshed-at">—</span> from this browser's
+        localStorage.
+      </p>
+
+      <section aria-labelledby="metrics-summary-title">
+        <p class="eyebrow">Overview</p>
+        <h2 id="metrics-summary-title">Validation progress</h2>
+        <div class="metrics-summary" id="metrics-summary"></div>
+      </section>
+
+      <section aria-labelledby="metrics-campaign-attribution-title">
+        <p class="eyebrow">Promotion reporting</p>
+        <h2 id="metrics-campaign-attribution-title">Campaign attribution</h2>
+        <p class="metrics-campaign-lede">
+          Measure TradeAI Australia campaign signups within a T0-relative window.
+          Compare window totals against the all-time baseline for the same UTM
+          campaigns.
+        </p>
+        <div id="campaign-attribution-root"></div>
+      </section>
+
+      <section aria-labelledby="metrics-campaign-links-title">
+        <p class="eyebrow">Promotion tools</p>
+        <h2 id="metrics-campaign-links-title">Campaign links</h2>
+        <p class="metrics-campaign-lede">
+          Generate tracked URLs for concept waitlists and the research feed. Pick a
+          page, set UTM params, and copy the full campaign link.
+        </p>
+        <div id="campaign-links-root"></div>
+      </section>
+
+      <section aria-labelledby="metrics-concepts-title">
+        <p class="eyebrow">Per concept</p>
+        <h2 id="metrics-concepts-title">Signup breakdown</h2>
+        <div class="metrics-concepts" id="metrics-concepts"></div>
+      </section>
+    </main>
+    <script type="module" src="/src/metrics/metrics-page.js"></script>
+  </body>
+</html>

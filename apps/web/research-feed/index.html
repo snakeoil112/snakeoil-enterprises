@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Snakeoil subscriber research feed — curated market opportunities from deep research"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Snakeoil Enterprises" />
+    <meta
+      property="og:title"
+      content="Subscriber Research Feed — Snakeoil Enterprises"
+    />
+    <meta
+      property="og:description"
+      content="Snakeoil subscriber research feed — curated market opportunities from deep research"
+    />
+    <meta
+      property="og:image"
+      content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='630' viewBox='0 0 1200 630'%3E%3Crect fill='%23141b2f' width='1200' height='630'/%3E%3Ctext x='600' y='300' fill='%234ade80' font-family='system-ui,sans-serif' font-size='56' font-weight='700' text-anchor='middle'%3ESnakeoil Enterprises%3C/text%3E%3Ctext x='600' y='360' fill='%2394a3b8' font-family='system-ui,sans-serif' font-size='28' text-anchor='middle'%3EConcept validation waitlist%3C/text%3E%3C/svg%3E"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Subscriber Research Feed — Snakeoil Enterprises"
+    />
+    <meta
+      name="twitter:description"
+      content="Snakeoil subscriber research feed — curated market opportunities from deep research"
+    />
+    <meta
+      name="twitter:image"
+      content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='630' viewBox='0 0 1200 630'%3E%3Crect fill='%23141b2f' width='1200' height='630'/%3E%3Ctext x='600' y='300' fill='%234ade80' font-family='system-ui,sans-serif' font-size='56' font-weight='700' text-anchor='middle'%3ESnakeoil Enterprises%3C/text%3E%3Ctext x='600' y='360' fill='%2394a3b8' font-family='system-ui,sans-serif' font-size='28' text-anchor='middle'%3EConcept validation waitlist%3C/text%3E%3C/svg%3E"
+    />
+    <title>Subscriber Research Feed — Snakeoil Enterprises</title>
+    <link rel="stylesheet" href="/src/style.css" />
+    <link rel="stylesheet" href="/src/research-feed.css" />
+    <link rel="stylesheet" href="/src/waitlist/waitlist.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="site-brand" href="../index.html">Snakeoil Enterprises</a>
+      <nav class="site-nav" aria-label="Research feed">
+        <a class="site-nav__link" href="../index.html#product-radar">Product radar</a>
+        <a class="site-nav__link" href="../waitlist/product-opportunity-radar/">Research waitlist</a>
+      </nav>
+    </header>
+
+    <main class="shell research-feed-shell">
+      <section class="research-feed-hero">
+        <a class="research-feed-back" href="../index.html#product-radar">← Back to product radar</a>
+        <p class="eyebrow">Subscriber research</p>
+        <h1>Curated opportunity feed</h1>
+        <p class="lede">
+          Six-plus scored niches from Snakeoil's deep research — gaps where incumbents
+          are generic and buyers still use spreadsheets.
+        </p>
+      </section>
+
+      <section
+        class="research-feed-gate"
+        id="research-feed-gate"
+        aria-labelledby="gate-title"
+        hidden
+      >
+        <p class="eyebrow">Email unlock</p>
+        <h2 id="gate-title">Subscribe to view the feed</h2>
+        <p class="research-feed-gate__hint">
+          One email unlocks the full research feed. No spam — we capture campaign
+          source for attribution only.
+        </p>
+        <form class="research-feed-form" id="unlock-form">
+          <label class="research-feed-form__field">
+            <span>Email</span>
+            <input
+              type="email"
+              name="email"
+              placeholder="you@example.com"
+              required
+              autocomplete="email"
+            />
+          </label>
+          <button type="submit" class="cta-button">Unlock research feed</button>
+          <p class="research-feed-form__note" id="unlock-note" hidden></p>
+        </form>
+      </section>
+
+      <section
+        class="research-feed-content"
+        id="research-feed-content"
+        aria-labelledby="feed-title"
+        hidden
+      >
+        <div class="research-feed-content__header">
+          <p class="eyebrow">Live feed</p>
+          <h2 id="feed-title">This week's opportunities</h2>
+          <p class="research-feed-content__lede">
+            Ranked by opportunity score from Snakeoil's deep market research.
+            Scores show revenue potential (R), competition gap (G), and Snakeoil fit (F).
+          </p>
+        </div>
+        <div class="research-feed-grid" id="research-feed-grid" aria-live="polite"></div>
+      </section>
+    </main>
+    <script type="module" src="/src/research-feed/feed-page.js"></script>
+  </body>
+</html>
